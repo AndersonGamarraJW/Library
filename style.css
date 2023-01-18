@@ -1,0 +1,184 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 50px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    width: 100vw;
+    height: 100vh;
+}
+p{
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.header{
+    grid-area: header;
+    padding: 10px;
+    background-color: #FF7B54;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px #ccc;
+}
+.header h1{
+    margin: 0;
+    color: #FFFF;
+    font-size: 25px;
+}
+.main {
+    grid-area: main;
+}
+.main-initial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-button{
+    appearance: none;
+    border: none;
+    height: 200px;
+    width: 200px;
+    font-size: 100px;
+    color: #FFFF;
+    background-color: #939B62;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px #ccc;
+}
+.footer{
+    grid-area: footer;
+    background-color: #FFB26B;
+    border-radius: 1rem 1rem 0px 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0px 0px 5px #ccc;
+}
+.footer p{
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.form-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0,0.4);
+}
+.form{
+    width: 30vw;
+    background-color: #FFD56F;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding:4rem;
+    box-shadow: 0px 0px 120px #767676;
+    position: relative;
+}
+.form label{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+}
+.form .default-input{
+    appearance: none;
+    border: none;
+    height: 30px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px #ccc;
+    padding-left: 1rem;
+    margin: 0.3rem 0 0.3rem 0;
+}
+.title-form{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+.button-submit-form{
+    appearance: none;
+    border:none;
+    height: 35px;
+    width: 70%;
+    margin-top: 2rem;
+    align-self: center;
+    background-color: #939B62;
+    border-radius: 1rem;
+    font-size: 17px;
+    color:#FFFF;
+}
+.exit-button{
+    width: 50px;
+    height: 50px;
+    appearance: none;
+    border: none;
+    background-color: #F53737;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFF;
+    position: absolute;
+    left: 80%;
+    top:5%;
+    box-shadow: 0px 0px 5px gray;
+}
+.alert{
+    font-size: 10px;
+    color: red;
+    margin-left: 1rem;
+    opacity: 0;
+}
+.activate{
+    opacity: 1;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem 0 0.3rem 0;
+}
+.card-book-container{
+    width: 200px;
+    height: 250px;
+    background-color: #FFFF;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px #ccc;
+}
+.card-content-container{
+    display: flex;
+    justify-content: space-between;
+}
+.card-buttons-container{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.card-book-container input[type="button"]{
+    appearance: none;
+    border: none;
+    height: 30px;
+    border: 0.5px solid;
+    border-radius: 0.5rem;
+}
+#is-read-card-button{
+    background-color: #FFFFFF;
+}
+#remove-card-button{
+    background-color: #F75959;
+    color: #FFFFFF;
+}
