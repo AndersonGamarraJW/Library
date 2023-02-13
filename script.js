@@ -4,6 +4,27 @@ const main = document.querySelector('.main');
 const addBookButton = document.querySelector('.add-button');
 addBookButton.addEventListener('click',showWindowAddBook);
 
+//Class
+class Book {
+    constructor(title,author,numeroPaginas,isRead){
+        this._title = title;
+        this._author = author;
+        this._numeroPaginas = numeroPaginas;
+        this._isRead = isRead;
+    }
+    printInfo(){
+        console.log('Title:',this._title);
+        console.log('Author:',this._author);
+        console.log('Number Pages:',this._numeroPaginas);
+        console.log('Is read:',this._isRead);   
+    }
+    get title(){ return this._title;}
+    get author(){return this._author;}
+    get numeroPaginas(){return this._numeroPaginas;}
+    get isRead(){return this._isRead;}
+    
+}
+/*
 function Book(title,author,numeroPaginas,isRead){
     this.title = title;
     this.author = author;
@@ -17,8 +38,10 @@ Book.prototype.printInfo = function (){
     console.log('Number Pages:',this.numeroPaginas);
     console.log('Is read:',this.isRead);
 }
+*/
 function addToLibrary(book){
     books.push(book);
+    book.printInfo();
 }
 
 function createInput(type,id,name,inputClass = "",isRequaried=false){
@@ -251,6 +274,7 @@ function addCardToMain(card){
 }
 function appendBook(){
     const book = books[books.length-1];
+    console.log(book.title);
     const card = createBookCard(book.title,book.author,book.numeroPaginas,book.isRead);
     addCardToMain(card);
 }
