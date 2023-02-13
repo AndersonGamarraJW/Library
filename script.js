@@ -24,21 +24,7 @@ class Book {
     get isRead(){return this._isRead;}
     
 }
-/*
-function Book(title,author,numeroPaginas,isRead){
-    this.title = title;
-    this.author = author;
-    this.numeroPaginas = numeroPaginas;
-    this.isRead = isRead;
-    
-}
-Book.prototype.printInfo = function (){
-    console.log('Title:',this.title);
-    console.log('Author:',this.author);
-    console.log('Number Pages:',this.numeroPaginas);
-    console.log('Is read:',this.isRead);
-}
-*/
+
 function addToLibrary(book){
     books.push(book);
     book.printInfo();
