@@ -41,6 +41,15 @@ p{
     justify-content: center;
     align-items: center;
 }
+.main-last {
+    margin-left:10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    justify-items: center;
+    row-gap: 12px;
+}
 .add-button{
     appearance: none;
     border: none;
@@ -175,10 +184,10 @@ p{
     border: 0.5px solid;
     border-radius: 0.5rem;
 }
-#is-read-card-button{
+.is-read-card-button{
     background-color: #FFFFFF;
 }
-#remove-card-button{
+.remove-card-button{
     background-color: #F75959;
     color: #FFFFFF;
 }

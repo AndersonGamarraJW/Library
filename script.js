@@ -1,4 +1,5 @@
 let books = [];
+let start = true;
 const main = document.querySelector('.main');
 const addBookButton = document.querySelector('.add-button');
 addBookButton.addEventListener('click',showWindowAddBook);
@@ -214,11 +215,13 @@ function createBookCard(title,author,numberPages,isRead){
     /*Buttons*/
     const readButton = document.createElement('input');
     readButton.setAttribute('type','button');
-    readButton.setAttribute('id','is-read-card-button');
+    readButton.classList.add('is-read-card-button');
+    readButton.value = 'Read';
     if (isRead == 'yes') readButton.style.backgroundColor = '#1AAE35';
     const removeButton = document.createElement('input');
     removeButton.setAttribute('type','button');
-    removeButton.setAttribute('id','remove-card-button');
+    removeButton.classList.add('remove-card-button');
+    removeButton.value = 'Remove';
     /*Organize*/
     titleCardContentContainer.appendChild(titlePara);
     titleCardContentContainer.appendChild(titleValue);
@@ -236,10 +239,20 @@ function createBookCard(title,author,numberPages,isRead){
     
     return cardBookContainer;
 }
+function addCardToMain(card){
+    if (start){
+        start = false;
+        main.classList.remove('main-initial');
+        main.classList.add('main-last');
+        main.appendChild(card);
+    }else{
+        main.appendChild(card);
+    }
+}
 function appendBook(){
     const book = books[books.length-1];
     const card = createBookCard(book.title,book.author,book.numeroPaginas,book.isRead);
-    console.log(card);
+    addCardToMain(card);
 }
 function printBooks(){
     books.forEach(book => {
